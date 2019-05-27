@@ -23,10 +23,38 @@ $(document).ready(function(){
 
     };
 
-
     typed = new Typed(".email-value", options);
 
+
+    let links = {
+        'fa-github' : 'https://github.com/Morteza-j8' ,
+        'fa-instagram' : 'https://www.instagram.com/mortezajalambadani/' ,
+        'fa-google' : 'mailto:Morteza.j8@gmail.com' ,
+        'fa-linkedin' : 'https://www.linkedin.com/in/morteza-jalambadani-341126b9/' ,
+        'fa-telegram' : 'https://t.me/morteza_jalambadani' ,
+        'fa-stack-overflow' : 'https://stackoverflow.com/users/5919568/morteza-jalambadani?tab=profile' ,
+
+    };
+
+    for( let lnk in links){
+        $('.' + lnk ).click(function(){
+            openUrlInNewTab(links[lnk]);
+        });
+    }
+
+
+
+
+
+
+
+
 });
+
+function openUrlInNewTab(url) {
+    window.open(url, '_blank');
+
+}
 
 function copyTextToClipboard() {
 
