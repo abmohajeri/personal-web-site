@@ -6,10 +6,6 @@ $(document).ready(function(){
         copyTextToClipboard();
     });
 
-
-
-    // Can also be included with a regular script tag
-
     var options = {
         strings: ["Morteza@J8@gmail.com", "Morteza@Jalambadani.ir"],
         typeSpeed: 60,
@@ -19,8 +15,6 @@ $(document).ready(function(){
         showCursor: true,
         cursorChar: '|',
         smartBackspace: false,
-
-
     };
 
     typed = new Typed(".email-value", options);
@@ -42,23 +36,13 @@ $(document).ready(function(){
         });
     }
 
-
-
-
-
-
-
-
 });
 
 function openUrlInNewTab(url) {
     window.open(url, '_blank');
-
 }
 
 function copyTextToClipboard() {
-
-
     typed.loop = false;
     // $(".email-value").select();
     $(".email-value").val("Morteza@Jalambadani.ir");
